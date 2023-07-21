@@ -1,0 +1,20 @@
+.header {
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    font-weight: bolder;
+}
+
+h3{
+    margin-top: 0;
+}
+
+h6 {
+    margin: 0;
+    color: grey;
+}
