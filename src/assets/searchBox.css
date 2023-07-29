@@ -32,13 +32,13 @@
   height: 3.1rem;
   border: 0;
   font-family: "Times New Roman", Times, serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bolder;
   background-color: #222;
-  color: dodgerblue;
+  color: rgb(30, 144, 255);
   transition: 0.3s;
 }
-.checkButton:hover {
+/* .checkButton:hover {
   width: 20%;
   height: 3.1rem;
   border: 0;
@@ -48,7 +48,7 @@
   background-color: rgb(0, 128, 255);
   color: white;
   transition: 0.3s;
-}
+} */
 
 .suggestionsWrapper {
   display: flex;

@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
 import StateContext from "../states/states-context";
 
-//.................................................
+//---------------------------------------------------------------------------------
 
 const ConditionClass = (props) => {
+  //---------------------------------------------------------------------------------
+
   const ctx = useContext(StateContext);
 
-  //.................................................
+  //......................................
 
   if (
     props.ultimateResult.condition.toString().toLowerCase().includes("cloud")
@@ -40,5 +42,7 @@ const ConditionClass = (props) => {
     ctx.getConditionClass("condition__foggy");
   }
 };
+
+//---------------------------------------------------------------------------------
 
 export default ConditionClass;

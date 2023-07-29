@@ -9,12 +9,15 @@ import nightPartlyCloudyIcon from "../assets/nightPartlyCloudyIcon.svg";
 import rainIcon from "../assets/rainIcon.svg";
 import windIcon from "../assets/windIcon.svg";
 import refreshIcon from "../assets/refreshIcon.svg";
-//.................................................
+
+//---------------------------------------------------------------------------------
 
 const ConditionIcon = (props) => {
+  //---------------------------------------------------------------------------------
+
   const ctx = useContext(StateContext);
 
-  //.................................................
+  //......................................
 
   if (
     props.ultimateResult.condition
@@ -63,5 +66,7 @@ const ConditionIcon = (props) => {
     ctx.getConditionIcon("../assets/sunIcon.svg");
   }
 };
+
+//---------------------------------------------------------------------------------
 
 export default ConditionIcon;

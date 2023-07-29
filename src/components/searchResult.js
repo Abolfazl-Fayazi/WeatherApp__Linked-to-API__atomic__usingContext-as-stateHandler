@@ -1,20 +1,22 @@
 import { useContext, useEffect, useState } from "react";
 import StateContext from "../states/states-context";
 import "../assets/searchResult.css";
-
+import { motion } from "framer-motion";
 import ConditionClass from "../utils/conditionClassSelector";
 import ConditionIcon from "../utils/conditionIconSelector";
 
+//---------------------------------------------------------------------------------
+
 const SearchResult = () => {
-  //.................................................
+  //---------------------------------------------------------------------------------
 
   const ctx = useContext(StateContext);
   const [ultimateResult, setUltimateResult] = useState({});
 
-  //.................................................
+  //---------------------------------------------------------------------------------
 
   useEffect(() => {
-    console.log(ctx.result);
+    //console.log(ctx.result);
 
     ctx.result.current &&
       setUltimateResult({
@@ -32,13 +34,30 @@ const SearchResult = () => {
       });
   }, [ctx.result.current]);
 
-  //.................................................
+  //......................................
 
-  //.................................................
+  const resultVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animation: {
+      opacity: 1,
+      transition: {
+        duration: 2,
+      },
+    },
+  };
 
+  //---------------------------------------------------------------------------------
   if (ultimateResult.cityName) {
     return (
-      <div className="wrapper">
+      <motion.div
+        className="wrapper"
+        variants={resultVariants}
+        initial="initial"
+        animate="animation"
+        key={ultimateResult.cityName}
+      >
         <div className="card">
           <h1>
             {ultimateResult.cityName +
@@ -62,15 +81,16 @@ const SearchResult = () => {
                 </h2>
               </div>
             </div>
-            {/* <div className="conditionIcon">
-              <ConditionIcon ultimateResult={ultimateResult} />
+            <div className="conditionIcon">
               <img src={ctx.conditionIcon} />
-            </div> */}
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   }
 };
+
+//---------------------------------------------------------------------------------
 
 export default SearchResult;
